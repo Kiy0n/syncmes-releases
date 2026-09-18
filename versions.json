@@ -3,6 +3,38 @@
   "product": "syncmes",
   "versions": [
     {
+      "version": "v0.6.0",
+      "released_at": "2026-09-18T22:03:57Z",
+      "prerelease": false,
+      "yanked": false,
+      "yanked_reason": null,
+      "min_upgrade_from": null,
+      "migrations": {
+        "count": 0,
+        "data_dependent": false,
+        "preflight_sql": []
+      },
+      "images": {
+        "backend": {
+          "ref": "ghcr.io/kiy0n/syncmes-backend:v0.6.0",
+          "digest": "sha256:87e6fc83ae2377fc149f64db1bc9ede514819f03ba709251c0825a243e37e6f4"
+        },
+        "frontend": {
+          "ref": "ghcr.io/kiy0n/syncmes-frontend:v0.6.0",
+          "digest": "sha256:730fda51b93993d120eee95543ef82e0ab5f0bf5c1dba25d094dba2b31b14695"
+        },
+        "pdf-service": {
+          "ref": "ghcr.io/kiy0n/syncmes-pdf-service:v0.6.0",
+          "digest": "sha256:d95e70992faf25772744965e396d79aa14c87548d044804e97388060df7723a8"
+        },
+        "bundle": {
+          "ref": "ghcr.io/kiy0n/syncmes-bundle:v0.6.0",
+          "digest": "sha256:6000710285152c65746a27736a599961acad5772221a8d9f27d4f52a4051b11c"
+        }
+      },
+      "notes_url": "https://github.com/Kiy0n/syncmes/releases/tag/v0.6.0"
+    },
+    {
       "version": "v0.6.0-rc.1",
       "released_at": "2026-09-18T21:55:14Z",
       "prerelease": true,
@@ -390,8 +422,8 @@
     }
   ],
   "channels": {
-    "stable": "v0.5.5",
-    "prerelease": "v0.6.0-rc.1"
+    "stable": "v0.6.0",
+    "prerelease": "v0.6.0"
   },
-  "generated_at": "2026-09-18T21:55:14Z"
+  "generated_at": "2026-09-18T22:03:57Z"
 }
