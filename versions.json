@@ -3,6 +3,40 @@
   "product": "syncmes",
   "versions": [
     {
+      "version": "v0.7.0-rc.1",
+      "released_at": "2026-09-27T04:08:57Z",
+      "prerelease": true,
+      "yanked": false,
+      "yanked_reason": null,
+      "min_upgrade_from": null,
+      "migrations": {
+        "count": 2,
+        "data_dependent": true,
+        "preflight_sql": [
+          "SELECT (SELECT COUNT(*) FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'usuarios' AND COLUMN_NAME = 'username') + (SELECT COUNT(*) FROM (SELECT gerado FROM (SELECT IF(rn = 1, base, CONCAT(base, rn)) AS gerado FROM (SELECT id, base, ROW_NUMBER() OVER (PARTITION BY base ORDER BY id) AS rn FROM (SELECT id, IF(n = '', 'usuario', TRIM(TRAILING '.' FROM LEFT(IF(LOCATE(' ', n) = 0, n, CONCAT(SUBSTRING_INDEX(n, ' ', 1), '.', SUBSTRING_INDEX(n, ' ', -1))), 45))) AS base FROM (SELECT id, TRIM(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(REGEXP_REPLACE(LOWER(nome), '[\\\\x{C0}-\\\\x{C5}\\\\x{E0}-\\\\x{E5}\\\\x{100}-\\\\x{105}\\\\x{1CD}\\\\x{1CE}\\\\x{1DE}-\\\\x{1E1}\\\\x{1FA}\\\\x{1FB}\\\\x{200}-\\\\x{203}\\\\x{226}\\\\x{227}\\\\x{1E00}\\\\x{1E01}\\\\x{1EA0}-\\\\x{1EB7}\\\\x{212B}]', 'a', 1, 0, 'c'), '[\\\\x{1E02}-\\\\x{1E07}]', 'b', 1, 0, 'c'), '[\\\\x{C7}\\\\x{E7}\\\\x{106}-\\\\x{10D}\\\\x{1E08}\\\\x{1E09}]', 'c', 1, 0, 'c'), '[\\\\x{10E}\\\\x{10F}\\\\x{1E0A}-\\\\x{1E13}]', 'd', 1, 0, 'c'), '[\\\\x{C8}-\\\\x{CB}\\\\x{E8}-\\\\x{EB}\\\\x{112}-\\\\x{11B}\\\\x{204}-\\\\x{207}\\\\x{228}\\\\x{229}\\\\x{1E14}-\\\\x{1E1D}\\\\x{1EB8}-\\\\x{1EC7}]', 'e', 1, 0, 'c'), '[\\\\x{1E1E}\\\\x{1E1F}]', 'f', 1, 0, 'c'), '[\\\\x{11C}-\\\\x{123}\\\\x{1E6}\\\\x{1E7}\\\\x{1F4}\\\\x{1F5}\\\\x{1E20}\\\\x{1E21}]', 'g', 1, 0, 'c'), '[\\\\x{124}\\\\x{125}\\\\x{21E}\\\\x{21F}\\\\x{1E22}-\\\\x{1E2B}\\\\x{1E96}]', 'h', 1, 0, 'c'), '[\\\\x{CC}-\\\\x{CF}\\\\x{EC}-\\\\x{EF}\\\\x{128}-\\\\x{130}\\\\x{1CF}\\\\x{1D0}\\\\x{208}-\\\\x{20B}\\\\x{1E2C}-\\\\x{1E2F}\\\\x{1EC8}-\\\\x{1ECB}]', 'i', 1, 0, 'c'), '[\\\\x{134}\\\\x{135}\\\\x{1F0}]', 'j', 1, 0, 'c'), '[\\\\x{136}\\\\x{137}\\\\x{1E8}\\\\x{1E9}\\\\x{1E30}-\\\\x{1E35}\\\\x{212A}]', 'k', 1, 0, 'c'), '[\\\\x{139}-\\\\x{13E}\\\\x{1E36}-\\\\x{1E3D}]', 'l', 1, 0, 'c'), '[\\\\x{1E3E}-\\\\x{1E43}]', 'm', 1, 0, 'c'), '[\\\\x{D1}\\\\x{F1}\\\\x{143}-\\\\x{148}\\\\x{1F8}\\\\x{1F9}\\\\x{1E44}-\\\\x{1E4B}]', 'n', 1, 0, 'c'), '[\\\\x{D2}-\\\\x{D6}\\\\x{F2}-\\\\x{F6}\\\\x{14C}-\\\\x{151}\\\\x{1A0}\\\\x{1A1}\\\\x{1D1}\\\\x{1D2}\\\\x{1EA}-\\\\x{1ED}\\\\x{20C}-\\\\x{20F}\\\\x{22A}-\\\\x{231}\\\\x{1E4C}-\\\\x{1E53}\\\\x{1ECC}-\\\\x{1EE3}]', 'o', 1, 0, 'c'), '[\\\\x{1E54}-\\\\x{1E57}]', 'p', 1, 0, 'c'), '[\\\\x{154}-\\\\x{159}\\\\x{210}-\\\\x{213}\\\\x{1E58}-\\\\x{1E5F}]', 'r', 1, 0, 'c'), '[\\\\x{15A}-\\\\x{161}\\\\x{218}\\\\x{219}\\\\x{1E60}-\\\\x{1E69}]', 's', 1, 0, 'c'), '[\\\\x{162}-\\\\x{165}\\\\x{21A}\\\\x{21B}\\\\x{1E6A}-\\\\x{1E71}\\\\x{1E97}]', 't', 1, 0, 'c'), '[\\\\x{D9}-\\\\x{DC}\\\\x{F9}-\\\\x{FC}\\\\x{168}-\\\\x{173}\\\\x{1AF}\\\\x{1B0}\\\\x{1D3}-\\\\x{1DC}\\\\x{214}-\\\\x{217}\\\\x{1E72}-\\\\x{1E7B}\\\\x{1EE4}-\\\\x{1EF1}]', 'u', 1, 0, 'c'), '[\\\\x{1E7C}-\\\\x{1E7F}]', 'v', 1, 0, 'c'), '[\\\\x{174}\\\\x{175}\\\\x{1E80}-\\\\x{1E89}\\\\x{1E98}]', 'w', 1, 0, 'c'), '[\\\\x{1E8A}-\\\\x{1E8D}]', 'x', 1, 0, 'c'), '[\\\\x{DD}\\\\x{FD}\\\\x{FF}\\\\x{176}-\\\\x{178}\\\\x{232}\\\\x{233}\\\\x{1E8E}\\\\x{1E8F}\\\\x{1E99}\\\\x{1EF2}-\\\\x{1EF9}]', 'y', 1, 0, 'c'), '[\\\\x{179}-\\\\x{17E}\\\\x{1E90}-\\\\x{1E95}]', 'z', 1, 0, 'c'), '\\\\p{M}', '', 1, 0, 'c'), '[\\\\t\\\\n\\\\x{B}\\\\f\\\\r \\\\x{A0}\\\\x{1680}\\\\x{2000}-\\\\x{200A}\\\\x{2028}\\\\x{2029}\\\\x{202F}\\\\x{205F}\\\\x{3000}\\\\x{FEFF}]+', ' ', 1, 0, 'c'), '[^a-z0-9 ]', '', 1, 0, 'c'), ' +', ' ', 1, 0, 'c')) AS n FROM usuarios) AS normalizado) AS bases) AS numerados) AS finais GROUP BY gerado HAVING COUNT(*) > 1) AS duplicados)"
+        ]
+      },
+      "images": {
+        "backend": {
+          "ref": "ghcr.io/kiy0n/syncmes-backend:v0.7.0-rc.1",
+          "digest": "sha256:3aa1f363b03bcf8122ebb40f177f711409051f4866febed3ba9b27c84a0361d6"
+        },
+        "frontend": {
+          "ref": "ghcr.io/kiy0n/syncmes-frontend:v0.7.0-rc.1",
+          "digest": "sha256:67e1ec0feb7185e84fc9227ac14fbab6de4c4da970b6231b0a0f486e8a747e82"
+        },
+        "pdf-service": {
+          "ref": "ghcr.io/kiy0n/syncmes-pdf-service:v0.7.0-rc.1",
+          "digest": "sha256:a4fbe9b81a985ceafb55232c3b6ea8008f3fd05033b602d8f65cce03974e94e4"
+        },
+        "bundle": {
+          "ref": "ghcr.io/kiy0n/syncmes-bundle:v0.7.0-rc.1",
+          "digest": "sha256:8da12d4cc17ee9fbfa18b6d7239463a44296258a903fb31c1d5245f94ad029be"
+        }
+      },
+      "notes_url": "https://github.com/Kiy0n/syncmes/releases/tag/v0.7.0-rc.1"
+    },
+    {
       "version": "v0.6.4",
       "released_at": "2026-09-26T15:36:35Z",
       "prerelease": false,
@@ -647,7 +681,7 @@
   ],
   "channels": {
     "stable": "v0.6.4",
-    "prerelease": "v0.6.4"
+    "prerelease": "v0.7.0-rc.1"
   },
-  "generated_at": "2026-09-26T15:36:35Z"
+  "generated_at": "2026-09-27T04:08:57Z"
 }
