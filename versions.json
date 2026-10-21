@@ -3,6 +3,37 @@
   "product": "syncmes",
   "versions": [
     {
+      "version": "v0.8.5-rc.1",
+      "released_at": "2026-10-21T00:13:08Z",
+      "prerelease": true,
+      "yanked": false,
+      "yanked_reason": null,
+      "min_upgrade_from": "v0.7.3",
+      "migrations": {
+        "count": 0,
+        "data_dependent": false
+      },
+      "images": {
+        "backend": {
+          "ref": "ghcr.io/kiy0n/syncmes-backend:v0.8.5-rc.1",
+          "digest": "sha256:26f81328055cd907683341e2d4ae35694e013eebb30737ee4677b058bec4663b"
+        },
+        "frontend": {
+          "ref": "ghcr.io/kiy0n/syncmes-frontend:v0.8.5-rc.1",
+          "digest": "sha256:c04869560a10a2b3880adcf147cc38bfb8516b621a149b433d002a6d6ce2e751"
+        },
+        "pdf-service": {
+          "ref": "ghcr.io/kiy0n/syncmes-pdf-service:v0.8.5-rc.1",
+          "digest": "sha256:e9f54a580a8506f4812523fc6b6503b2ba291016d8c0584b32c84eb595cfecb6"
+        },
+        "bundle": {
+          "ref": "ghcr.io/kiy0n/syncmes-bundle:v0.8.5-rc.1",
+          "digest": "sha256:8be8ed1321355ea9b091df99bdc36fe040febd42766ea2a810ddc1a275eee94c"
+        }
+      },
+      "notes_url": "https://github.com/Kiy0n/syncmes/releases/tag/v0.8.5-rc.1"
+    },
+    {
       "version": "v0.8.4",
       "released_at": "2026-10-17T01:55:05Z",
       "prerelease": false,
@@ -1276,7 +1307,7 @@
   ],
   "channels": {
     "stable": "v0.8.4",
-    "prerelease": "v0.8.4"
+    "prerelease": "v0.8.5-rc.1"
   },
-  "generated_at": "2026-10-17T01:55:05Z"
+  "generated_at": "2026-10-21T00:13:08Z"
 }
